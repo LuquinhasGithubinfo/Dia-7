@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <!-- Menu de navegação -->
+    <div class="menu">
+        <a href="Cadastro.php"><button>Cadastro</button></a>
+        <a href="Visualizar.php"><button>Visualizar</button></a>
+        <a href="alterar.php"><button>Alteração</button></a>
+    </div>
+
+    <!-- Exibição dos bancos de dados -->
+    <div class="database">
+        <h1>Banco de Dados Empresa</h1>
+        <div class="table">
+            <h2>Tabela: Tbl_Funcionario</h2>
+            <pre>CREATE DATABASE Empresa;
+USE Empresa;
+
+CREATE TABLE Tbl_Funcionario(
+       Fun_codigo INT primary key auto_increment,
+       Fun_Nome VARCHAR(255),
+       Fun_Cargo VARCHAR(255));
+
+DROP TABLE Tbl_Funcionario;</pre>
+        </div>
+        <div class="table">
+            <h2>Tabela: Tbl_Registros</h2>
+            <pre>CREATE TABLE Tbl_Registros(
+       Reg_codigo INT primary key auto_increment,
+       Reg_Data VARCHAR(255),
+       Reg_Hora VARCHAR(255),
+       Fun_codigo INT );
+
+DROP TABLE Tbl_Registros;
+
+ALTER TABLE Tbl_Registros
+ADD CONSTRAINT fk_Fun_codigo
+FOREIGN KEY (Fun_codigo) REFERENCES Tbl_Funcionario(Fun_codigo);</pre>
+        </div>
+        <div class="table">
+            <h2>Consultas</h2>
+            <pre>SELECT * FROM Tbl_Funcionario;
+SELECT * FROM Tbl_Registros;</pre>
+        </div>
+    </div>
+</body>
+</html>

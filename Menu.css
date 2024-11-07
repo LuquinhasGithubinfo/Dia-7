@@ -1,0 +1,112 @@
+/* Estilo geral da página */
+body {
+    background-color: black;
+    color: #00FF00; /* Verde estilo "hacker" */
+    font-family: 'Courier New', Courier, monospace; /* Fonte monoespaçada */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* Para que o conteúdo comece na parte superior */
+    align-items: flex-start;
+    flex-direction: column;
+    min-height: 100vh; /* Garantir que a página ocupe toda a altura da tela */
+}
+
+/* Menu superior */
+.menu {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%; /* Garantir que o menu ocupe toda a largura */
+    padding: 10px 0; /* Adicionar espaçamento nos botões */
+    background-color: #111; /* Cor de fundo para o menu */
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5); /* Sombra para o menu */
+}
+
+.menu a {
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.menu button {
+    background-color: forestgreen;
+    color: white;
+    border: 2px solid #00FF00;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.menu button:hover {
+    background-color: #00FF00;
+    color: black;
+}
+
+/* Div para centralizar a imagem */
+.imagem-centralizada {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Espaçamento entre a imagem e os botões */
+}
+
+.imagem {
+    width: 80%; /* Ajuste o tamanho da imagem conforme necessário */
+    max-width: 800px;
+    border: 5px solid #00FF00; /* Borda verde estilo hacker */
+    box-shadow: 0 0 15px #00FF00;
+}
+
+/* Conteúdo do banco de dados */
+.database {
+    width: 100%;
+    max-width: 1200px; /* Limita a largura das tabelas */
+    margin-top: 40px; /* Espaçamento entre a imagem e o conteúdo das tabelas */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo das tabelas */
+.table {
+    background-color: #111;
+    margin-bottom: 30px; /* Espaçamento entre as tabelas */
+    border: 2px solid #00FF00;
+    box-shadow: 0 0 10px #00FF00;
+    padding: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #00FF00;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #00FF00;
+    color: black;
+}
+
+td {
+    background-color: #000;
+    color: #00FF00;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #222;
+}
+
+/* Estilo para quando não houver dados */
+.tabela p {
+    color: #00FF00;
+    font-size: 18px;
+}
+object{
+text-align: center;    
+}
